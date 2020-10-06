@@ -1,10 +1,10 @@
-##Programas necesarios
+## Programas necesarios
 composer
 nmp
 visual studio code
 xampp
 
-##Instrucciones para clonar el proyecto
+## Instrucciones para clonar el proyecto
 Clonar el proyecto
 Desde la consola de comandos situarse dentro de la carpeta del proyecto y poner los siguiente comandos(en orden)
 
