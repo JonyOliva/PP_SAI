@@ -9,7 +9,7 @@ Clonar el proyecto
 Desde la consola de comandos situarse dentro de la carpeta del proyecto y poner los siguiente comandos(en orden)
 
 - composer install
-- nmp install
+- npm install
 - copy .env.example .env
 - php artisan key:generate
 - php artisan serve 
