@@ -1,18 +1,18 @@
 ## Programas necesarios
-composer
-nmp
-visual studio code
-xampp
+- npm
+- xampp
+- composer
+- visual studio code
 
 ## Instrucciones para clonar el proyecto
 Clonar el proyecto
 Desde la consola de comandos situarse dentro de la carpeta del proyecto y poner los siguiente comandos(en orden)
 
-composer install
-nmp install
-copy .env.example .env
-php artisan key:generate
-php artisan serve 
+- composer install
+- nmp install
+- copy .env.example .env
+- php artisan key:generate
+- php artisan serve 
 
 el último abre el servidor
 
