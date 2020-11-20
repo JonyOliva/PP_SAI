@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class instancia extends Model
 {
-    protected $table="instancias";
+    protected $primaryKey="inst_id";
     protected $fillable = [
-        'id', 'idInscripcion', 'descripcion', 'anio','numInscripcion' ,'estado','fechaInicio','fechaFin'
+        'inst_id', 'idInscripcion', 'descripcion', 'anio','numInscripcion' ,'estado','fechaInicio','fechaFin'
     ];
 }

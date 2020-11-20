@@ -9,6 +9,7 @@ class carrera extends Model
 
 
     protected $table="carreras";
+    protected $primaryKey="carr_id";
     protected $fillable = [
         'id', 'idTipo', 'codigoInterno', 'descripcion','idInscripcion'
     ];
