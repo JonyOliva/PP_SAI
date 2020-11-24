@@ -12,4 +12,41 @@ class InscriptionController extends Controller
         //return view('inscription')->with('instancia', $test);
         return view('inscription');
     }
+
+    public function buscarInscripciones($listaPermisosUsuario){
+
+
+    }
+
+    public function buscarAños($inscipcion){
+
+
+    }
+
+    public function buscarInstancias($año){
+
+
+    }
+
+    public function buscarCarreras($instancia){
+
+
+    }
+
+    public function buscarModalidades(){
+
+    }
+
+    public function buscarIngresantes($inscipcion,$año,$instancia){
+
+        return $listaIngresantes;
+    }
+
+    public function cargarPagina(){
+        if(Session::get('login')!=null){
+            //cargar combox de inscripciones y modalidades
+        }
+        else
+            return view('login');
+    }
 }
