@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Instancia;     
+use App\Instancia;
+use Session;
+
 class InscriptionController extends Controller
 {
     public function Index(){
@@ -18,33 +20,10 @@ class InscriptionController extends Controller
 
     }
 
-    public function buscarAños($inscipcion){
-
-
-    }
-
-    public function buscarInstancias($año){
-
-
-    }
-
-    public function buscarCarreras($instancia){
-
-
-    }
-
-    public function buscarModalidades(){
-
-    }
-
-    public function buscarIngresantes($inscipcion,$año,$instancia){
-
-        return $listaIngresantes;
-    }
-
     public function cargarPagina(){
-        if(Session::get('login')!=null){
-            //cargar combox de inscripciones y modalidades
+        //dd(Session::get('login'));
+        if(session()->has('login')){
+            return view('inscription');
         }
         else
             return view('login');

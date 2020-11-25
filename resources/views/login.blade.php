@@ -14,25 +14,35 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 1em;">
   		<span class="navbar-brand mb-0 h1">Universidad Tecnológica Nacional</span>
 	</nav>
-
-    </html><div class="container body-content"><br />
-        <div class="jumbotron jumbotron-fluid text-center rounded-pill">
-            <div class="container">
+    <div class="container body-content"><br />
+        <div class="row d-flex justify-content-center">
+            <div class="col-4">
                 <h1 class="display-4">Iniciar sesión</h1>
+                <hr />
+                <form method="post" action="/login">
+                    @csrf
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Usuario</label>
+                            <input type="text" class="form-control" name="txtUsuario" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="password" class="form-control" name="txtContraseña" required>
+                        </div>
+                    </div>
+                        <hr />
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-lg" value="Ingresar">
+                            <!-- <a href="inscription" class="btn btn-primary btn-lg"></a> -->
+                        </div>
+                    </div>
+                </form>    
             </div>
         </div>
-        <hr />
-        <div class="form-group">
-            <label for="exampleInputEmail1">Usuario</label>
-            <input type="text" class="form-control small" Style="width: 1100px">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" Style="width: 1100px">
-        </div>    
-        <div>
-            <br />
-        </div>
-        <a href="inscription" class="btn btn-primary btn-lg" Style="width: 1100px" >Ingresar</a>
     </div>
 </body>
+</html>

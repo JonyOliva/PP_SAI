@@ -12,4 +12,6 @@
 */
 
 Route::get('/', 'LoginController@Index');
-Route::get('/inscription', 'InscriptionController@Index');
+Route::get('login', 'LoginController@Index');
+Route::post('login', 'LoginController@iniciarSesion');
+Route::get('inscription', 'InscriptionController@cargarPagina');

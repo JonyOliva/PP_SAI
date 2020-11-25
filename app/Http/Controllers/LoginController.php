@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 
 class LoginController extends Controller
 {
@@ -10,14 +11,14 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function iniciarSesion($usuario, $contraseña){
+    public function iniciarSesion(Request $request){
         //Verifica que el usuario y contraseña sean correctos.
 
 
 
         //Agrega el usuario a session.
-        Session::put('login', $usuario);
-        return view('inscription');
+        session()->put('login', $request->txtUsuario);
+        return redirect()->action('InscriptionController@cargarPagina');
     }
 
 
