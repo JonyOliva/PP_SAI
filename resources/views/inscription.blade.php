@@ -23,61 +23,86 @@
         </div>
     </div>
 
-    <form class="mx-4">
-        <div class="form-row">
-            <div class="col-md-6 mb-3">
-                <label>Inscripcion</label>
-                <select class="custom-select" id="validationCustom04">
-                    <option selected disabled value=""></option>
-                    <option>...</option>
+    <form action="" method="post">
+        @csrf
+        <div class="row  mx-4 mb-3">
+            <div class="col-md-10">
+                <label>Inscripción</label>
+                <select  class="form-control" name=comboInscripcion required="required">
+                    <option value="test1" >test1</option>
+                    <option value="test2" >test2</option>
+                    <option value="test3" >test3</option>
+                <!--@isset($inscripciones)
+                        @foreach($inscripciones as $inscripcion)
+                            <option value="{{$inscripcion->id}}">{{$inscripcion->descripcion}}</option>
+                        @endforeach
+                    @endisset -->
                 </select>
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-2">
             <label>Año</label>
-                <select class="custom-select" id="validationCustom04">
-                    <option selected disabled value=""></option>
-                    <option>...</option>
+                <select  class="form-control" name=comboAño required="required">
+                    @isset($años)
+                        @foreach($años as $año)
+                            <option value="{{$año->id}}">{{$año->descripcion}}</option>
+                        @endforeach
+                    @endisset
                 </select>
             </div>
         </div>
 
-        <div class="form-row">
-            <div class="col-md-6 mb-3">
+        <div class="row mx-4 mb-3">
+            <div class="col-md-6">
                 <label>Instancia</label>
-                <select class="custom-select" id="validationCustom04">
-                    <option selected disabled value=""></option>
-                    <option>...</option>
+                <select  class="form-control" name=comboInstancia required="required">
+                    @isset($instancias)
+                        @foreach($instancias as $instancia)
+                            <option value="{{$instancia->inst_id}}">{{$instancia->descripcion}}</option>
+                        @endforeach
+                    @endisset
                 </select>
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6">
                 <label>Carrera</label>
-                <select class="custom-select" id="validationCustom04">
-                    <option selected disabled value=""></option>
-                    <option>...</option>
+                <select  class="form-control" name=comboCarrera required="required">
+                    @isset($carreras)
+                        @foreach($carreras as $carrera)
+                            <option value="{{$carrera->id}}">{{$carrera->descripcion}}</option>
+                        @endforeach
+                    @endisset
                 </select>
             </div>
         </div>
 
-        <div class="form-row">
-            <div class="col-md-6 mb-3">
+        <div class="row mx-4 mb-3">
+            <div class="col-md-3">
                 <label>Modalidad</label>
-                <select class="custom-select" id="validationCustom04">
-                    <option selected disabled value=""></option>
-                    <option>...</option>
+                <select  class="form-control" name=comboModalidad required="required">
+                    @isset($modalidades)
+                        @foreach($modalidades as $modalidad)
+                            <option value="{{$modalidad->id}}">{{$modalidad->descripcion}}</option>
+                        @endforeach
+                    @endisset
                 </select>
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-3">
                 <label>Cuales</label>
-                <select class="custom-select" id="validationCustom04">
-                    <option selected disabled value=""></option>
-                    <option>...</option>
+                <select  class="form-control" name=comboCuales required="required">
+                    @isset($cuales)
+                        @foreach($cuales as $cual)
+                            <option value="{{$cual->id}}">{{$cual->descripcion}}</option>
+                        @endforeach
+                    @endisset
                 </select>
+            </div>
+            <div class="col-md-2 align-self-end">
+                <button class="btn btn-primary" type="submit">BUSCAR</button><br>
             </div>
         </div>
-        <button class="btn btn-primary btn-lg btn-block" type="submit">BUSCAR</button><br>
     </form>
 
-    <form class="m-3">
+    <form class="m-3" action="" method="">
+        @csrf
         <table class="table table-dark">
             <thead>
                 <tr>

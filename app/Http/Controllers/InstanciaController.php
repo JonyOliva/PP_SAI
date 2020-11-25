@@ -10,4 +10,8 @@ class InstanciaController extends Controller
 
 
     }
+
+    public function buscarAños($id){
+
+    }
 }
