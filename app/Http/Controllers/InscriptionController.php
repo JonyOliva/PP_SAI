@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Instancia;
+use App\inscripcion;
 use Session;
 
 class InscriptionController extends Controller
@@ -15,15 +16,11 @@ class InscriptionController extends Controller
         return view('inscription');
     }
 
-    public function buscarInscripciones($listaPermisosUsuario){
-
-
-    }
-
     public function cargarPagina(){
         //dd(Session::get('login'));
         if(session()->has('login')){
-            return view('inscription');
+            //TODO_ traer los datos de inscripciones y modalidades
+            return view('inscription',compact('inscripciones','modalidades'));
         }
         else
             return view('login');

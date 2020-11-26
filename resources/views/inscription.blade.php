@@ -44,7 +44,7 @@
                 <select  class="form-control" name=comboAño required="required">
                     @isset($años)
                         @foreach($años as $año)
-                            <option value="{{$año->id}}">{{$año->descripcion}}</option>
+                            <option value="{{$año->format("Y")}}">{{$año->format("Y")}}</option>
                         @endforeach
                     @endisset
                 </select>

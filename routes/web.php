@@ -17,5 +17,3 @@ Route::post('login', 'LoginController@iniciarSesion');
 
 Route::get('inscription', 'InscriptionController@cargarPagina');
 
-//Route::post('login', 'AñoController@index');
-
