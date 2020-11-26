@@ -11,6 +11,6 @@ class ModalidadController extends Controller
     public function buscarModalidades(){
         //Traer del Negocio la lista de modalidades
         $modalidades = modalidad::all();
-        return $modalidades;
+        return view('inscription',compact('modalidades'));
     }
 }

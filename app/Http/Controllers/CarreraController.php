@@ -12,6 +12,6 @@ class CarreraController extends Controller
 
         //Traer del Negocio la lista de carreras
         //$carreras = buscarVCarrerasNeg($instancia);
-        return $carreras;
+        return view('inscription',compact('carreras'));
     }
 }

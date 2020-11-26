@@ -9,13 +9,13 @@ class InscripcionController extends Controller
     public function buscarInscripciones($listaPermisosUsuario){
 
         //$inscripciones = buscarInscripcionesNeg($listaPermisosUsuario);
-        return $inscripciones;  
+        return view('inscription',compact('inscripciones'));
     }
 
     
     public function buscarAños($id){
 
         //$fechaInscripcion = buscarAñosNeg($id);
-        return $fechaInscripcion;
+        return view('inscription',compact('fechaInscripcion'));
     }
 }
