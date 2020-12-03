@@ -13,17 +13,16 @@ class Instancias extends Migration
      */
     public function up()
     {
-        Schema::create('Instancias', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('idInscripcion');
-            $table->string('descripcion');
-            $table->string('anio');
-            $table->string('numInscripcion');
-            $table->string('estado');
-            $table->string('fechaInicio');
-            $table->string('fechaFin');
-            $table->rememberToken();
-            $table->timestamps();
+        Schema::create('instancias', function (Blueprint $table) {
+            $table->string('inst_id',10);
+            $table->string('inst_idinscripcion',10);
+            $table->string('inst_descripcion',70);
+            $table->string('inst_anio',4);
+            $table->string('inst_nroinscripcion',5);
+            $table->string('inst_estado',20);
+            $table->date('inst_fechainicio');
+            $table->date('inst_fechafin');
+         
         });
     }
 
@@ -34,6 +33,6 @@ class Instancias extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Instancias');
+        Schema::dropIfExists('instancias');
     }
 }
