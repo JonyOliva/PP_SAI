@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 
 class IngresanteController extends Controller
 {
-    public function buscarIngresantes($inscipcion,$año,$instancia,$carrera,$modalidad,$opcion){
+    public function buscarIngresantes(Request $request){
 
-        //Traer del Negocio la lista de ingresantes
+        //TODO_ query para traer los ingresantes
+        
         //$listaIngresantes = buscarIngresantesNeg($inscipcion,$año,$instancia,$carrera,$modalidad,$opcion);
-        return view('inscription',compact('listaIngresantes'));
+        //return view('inscription',compact('listaIngresantes'));
     }
 }

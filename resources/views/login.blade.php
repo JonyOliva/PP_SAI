@@ -23,21 +23,27 @@
                     @csrf
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Usuario</label>
+                            <label>Usuario</label>
                             <input type="text" class="form-control" name="txtUsuario" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Contraseña</label>
+                            <label>Contraseña</label>
                             <input type="password" class="form-control" name="txtContraseña" required>
                         </div>
                     </div>
+                    @isset($loginError)
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="alert alert-danger">Usuario o contraseña incorrectos!</label>
+                        </div>
+                    </div>
+                    @endisset
                         <hr />
                     <div class="form-row">
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary btn-lg" value="Ingresar">
-                            <!-- <a href="inscription" class="btn btn-primary btn-lg"></a> -->
                         </div>
                     </div>
                 </form>    

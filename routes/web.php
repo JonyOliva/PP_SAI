@@ -11,9 +11,16 @@
 |
 */
 
+//Login
 Route::get('/', 'LoginController@Index');
 Route::get('login', 'LoginController@Index');
 Route::post('login', 'LoginController@iniciarSesion');
 
+//Inscription
 Route::get('inscription', 'InscriptionController@cargarPagina');
+Route::post('inscription', 'IngresanteController@buscarIngresantes');
 
+    //DropDowns
+    Route::get('buscarAnios','InscripcionController@buscarAños');
+    Route::get('buscarInstancias','InstanciaController@buscarInstancias');
+    Route::get('buscarCarreras','CarreraController@buscarCarreras');

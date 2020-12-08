@@ -3,19 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\inscripcion;
 
 class InscripcionController extends Controller
-{
-    public function buscarInscripciones($listaPermisosUsuario){
+{    
+    public function buscarAños(Request $request){
 
-        //$inscripciones = buscarInscripcionesNeg($listaPermisosUsuario);
-        return view('inscription',compact('inscripciones'));
-    }
+        //TODO_ Query para traer los años de las inscripciones
 
-    
-    public function buscarAños($id){
-
-        //$fechaInscripcion = buscarAñosNeg($id);
-        return view('inscription',compact('fechaInscripcion'));
+        //$anios=inscripcion::select('')->where('',$request->id)->get();
+        //return response()->json($anios);
     }
 }

@@ -8,9 +8,9 @@ use App\instancia;
 
 class InstanciaController extends Controller
 {
-    public function buscarInstancias($año){
+    public function buscarInstancias(Request $request){
         
-        $instancia = instancia::where("inst_anio", $año)->get();
-        return view('inscription', compact('instancia'));
+        $instancia = instancia::where("inst_anio", $request->anio)->get();
+        return response()->json($instancia);
     }
 }
