@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\inscripcion;
+use App\alumno;
 
 class BusquedaDeIngresantesController extends Controller
 {    
