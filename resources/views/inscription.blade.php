@@ -131,8 +131,8 @@
                 </tr>
             </tbody>
         </table>
-        <button class="btn btn-secondary" type="submit">EXPORTAR RGA</button>
-        <button class="btn btn-secondary" type="submit">EXPORTAR A EXCEL</button>
+        <button class="btn btn-secondary" name ="RGA" type="submit">EXPORTAR RGA</button>
+        <button class="btn btn-secondary" name ="EXCEL" type="submit">EXPORTAR A EXCEL</button>
     </form>
 
     <script type="text/javascript">
