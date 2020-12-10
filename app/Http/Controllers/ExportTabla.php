@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\inscripcion;
 
-class InscripcionController extends Controller
+class BusquedaDeIngresantesController extends Controller
 {    
     public function exportrga(Request $request){
         //traer la tabla como array
