@@ -91,48 +91,48 @@
         </div>
     </form>
 
-    <form class="m-3" action="" method="post">
+    <form class="m-3" action="exportrga" method="get">
         @csrf
-        <table class="table table-dark">
+        <table class="table table-dark" name="tablaAlumnos">
             <thead>
                 <tr>
-                    <th scope="col">Apellido</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Fecha</th>
-                    <th scope="col">Modalidad</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Teléfono</th>
-                    <th scope="col">Celular</th>
-                    <th scope="col">Localidad</th>
-                    <th scope="col">Calle</th>
-                    <th scope="col">Nro. calle</th>
-                    <th scope="col">Carrera</th>
-                    <th scope="col">Nro. inscripcion</th>
+                    <th>Apellido</th>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Modalidad</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Celular</th>
+                    <th>Localidad</th>
+                    <th>Calle</th>
+                    <th>Nro. calle</th>
+                    <th>Carrera</th>
+                    <th>Nro. inscripcion</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
+                    <th>1</th>
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>@mdo</td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
+                    <th>2</th>
                         <td>Jacob</td>
                         <td>Thornton</td>
                         <td>@fat</td>
                 </tr>
                 <tr>
-                    <th scope="row">3</th>
+                    <th>3</th>
                     <td>Larry</td>
                     <td>the Bird</td>
                     <td>@twitter</td>
                 </tr>
             </tbody>
         </table>
-        <button class="btn btn-secondary" name ="RGA" type="submit">EXPORTAR RGA</button>
-        <button class="btn btn-secondary" name ="EXCEL" type="submit">EXPORTAR A EXCEL</button>
+        <button class="btn btn-secondary" name ="RGA" value="rga" type="submit">EXPORTAR RGA</button>
+        <button class="btn btn-secondary" name ="EXCEL" value="excel" type="submit">EXPORTAR A EXCEL</button>
     </form>
 
     <script type="text/javascript">

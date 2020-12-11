@@ -19,6 +19,7 @@ Route::post('login', 'LoginController@iniciarSesion');
 //Inscription
 Route::get('inscription', 'InscriptionController@cargarPagina');
 Route::post('inscription', 'IngresanteController@buscarIngresantes');
+Route::get('exportrga', 'ExportTabla@exportrga');
 
     //DropDowns
     Route::get('buscarAnios','InscripcionController@buscarAños');
